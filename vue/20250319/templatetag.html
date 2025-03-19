@@ -1,0 +1,46 @@
+<style>
+  #list {
+    width: 600px;
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+
+  #list td,
+  #list th {
+    border: 1px solid black;
+    text-align: center;
+  }
+
+  #list > thead > tr {
+    color: yellow;
+    background-color: purple;
+  }
+
+  .divider {
+    height: 2px;
+    background-color: gray;
+  }
+</style>
+<div id="app">
+  <table id="list">
+    <thead>
+      <tr>
+        <th>번호</th>
+        <th>이름</th>
+        <th>전화번호</th>
+      </tr>
+    </thead>
+    <tbody id="contacts">
+      <template v -for="(contact, index) in contacts" :key="contact.no">
+        <tr>
+          <td>{{contact.no}}</td>
+          <td>{{contact.name}}</td>
+          <td>{{contact.tel}}</td>
+        </tr>
+        <tr class="divider" v -if="index % 4 === 3">
+          <td colspan="3"></td>
+        </tr>
+      </template>
+    </tbody>
+  </table>
+</div>
