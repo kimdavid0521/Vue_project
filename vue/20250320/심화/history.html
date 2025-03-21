@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>히스토리 기록 남기기</title>
+  </head>
+  <body>
+    <div id="app">
+      <input type="text" v-model="inputValue" />
+      <div v-for="(comment, index) in items" :key="comment.id">
+        <div v-text="comment.id"></div>
+        <div v-text="comment.comment"></div>
+      </div>
+      <div>
+        <button @click="addComment">기록하기</button>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/vue"></script>
+    <script>
+      const comments = [{ id: "", comment: "" }];
+      const vm = Vue.createApp({
+        name: "App",
+        data() {
+          x;
+          return {
+            inputValue: "",
+          };
+        },
+        methods: {
+          addComment() {},
+        },
+      }).mount("#app");
+    </script>
+  </body>
+</html>
