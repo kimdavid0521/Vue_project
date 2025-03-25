@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>우리반 콘텍트</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div id="app">
+      <div class="container">
+        <h1>우리반 Contact</h1>
+
+        <div>
+          <span><input type="text" /></span>
+          <span>
+            <div class="btn-group">
+              <div class="btn-group">
+                <button
+                  type="button"
+                  class="btn btn-primary dropdown-toggle"
+                  data-bs-toggle="dropdown"
+                >
+                  Sony
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Tablet</a></li>
+                  <li><a class="dropdown-item" href="#">Smartphone</a></li>
+                </ul>
+              </div>
+            </div>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/vue"></script>
+    <script>
+      const vm = Vue.createApp({
+        name: "App",
+        data() {
+          return {};
+        },
+      }).mount("#app");
+    </script>
+  </body>
+</html>
