@@ -21,6 +21,8 @@
 <script>
 export default {
   name: "TodoCount",
+
+  // 부모로부터 데이터 전달 받기 + 유효성 검사
   props: {
     todolist: { type: Array, required: true },
   },
