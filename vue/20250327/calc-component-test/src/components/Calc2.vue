@@ -18,6 +18,7 @@ export default {
     const y = ref(20);
     const result = ref(30);
     const calcAdd = () => {
+        // 이렇게 ref를 통해 생성된 변수들은 .value로 접근해야함
       result.value = x.value + y.value;
     };
     return { x, y, result, calcAdd };
