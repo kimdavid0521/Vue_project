@@ -39,6 +39,7 @@ const getTodo = async () => {
   state.todo = response.data; // 응답 결과를 state.todo에 대입 -> 화면이 다시 렌더링
 };
 
+// 화면에 컴포넌트가 랜더링될때 단건 조회 호출
 onMounted(() => {
   getTodo();
 });
